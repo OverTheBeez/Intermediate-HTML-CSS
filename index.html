@@ -1,0 +1,319 @@
+<!-- Emmet is a short-cut feature built into VSCode where certain things can be typed/ or bound to key presses out to generate code -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intermediate HTML and CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- <p>Hello World</p> wrapped using abbreviation -> .wrapper>h1{Title}+.content -->
+    <div class="wrapper">
+      <h1>Title</h1>
+      <div class="content">
+        <p>Hello World</p>
+      </div>
+    </div>
+
+    <!-- Plain text wrapped using abbreviation -> nav>ul.nav>li.nav-item$*>a -->
+    <nav>
+      <ul class="nav">
+        <li class="nav-item1">
+          <a href="">About</a>
+        </li>
+        <li class="nav-item2">
+          <a href="">News</a>
+        </li>
+        <li class="nav-item3">
+          <a href="">Products</a>
+        </li>
+        <li class="nav-item4">
+          <a href="">Contracts</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Similar to the example above, but the list had numbers before the words, we can use Emmet to trim the numbers by ending the abbreviation with |t -> ul.nav>li.nav-item$*>a|t -->
+    <ul class="nav">
+      <li class="nav-item1">
+        <a href="">About</a>
+      </li>
+      <li class="nav-item2">
+        <a href="">News</a>
+      </li>
+      <li class="nav-item3">
+        <a href="">Products</a>
+      </li>
+      <li class="nav-item4">
+        <a href="">Contracts</a>
+      </li>
+    </ul>
+
+    <!-- Tables -->
+    <h1>Table template</h1>
+    <!-- <table>
+      <tr>
+        <td>Hi, I'm your first cell.</td>
+        <td>I'm your second cell.</td>
+        <td>I'm your third cell.</td>
+        <td>I'm your fourth cell.</td>
+        <td>I'm your fifth cell.</td>
+        <td>I'm your sixth cell.</td>
+      </tr>
+      <tr>
+        <td>Second Row, I'm your first cell.</td>
+        <td>I'm your second cell.</td>
+        <td>I'm your third cell.</td>
+        <td>I'm your fourth cell.</td>
+        <td>I'm your fifth cell.</td>
+        <td>I'm your sixth cell.</td>
+      </tr>
+    </table> -->
+
+    <!-- <table>
+      <tr>
+        <td>&nbsp;</td>
+        <th>Knocky</th>
+        <th>Flor</th>
+        <th>Ella</th>
+        <th>Juan</th>
+      </tr>
+      <tr>
+        <th>Breed</th>
+        <td>Jack Russell</td>
+        <td>Poodle</td>
+        <td>Streetdog</td>
+        <td>Cocker Spaniel</td>
+      </tr>
+      <tr>
+        <th>Age</th>
+        <td>16</td>
+        <td>9</td>
+        <td>10</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <th>Owner</th>
+        <td>Mother-in-law</td>
+        <td>Me</td>
+        <td>Me</td>
+        <td>Sister-in-law</td>
+      </tr>
+      <tr>
+        <th>Eating Habits</th>
+        <td>Eats everyone's leftovers</td>
+        <td>Nibbles at food</td>
+        <td>Hearty eater</td>
+        <td>Will eat till he explodes</td>
+      </tr>
+    </table> -->
+    <!-- <table>
+      <tr>
+        <th colspan="2">Animals</th>
+      </tr>
+      <tr>
+        <th colspan="2">Hippopotamus</th>
+      </tr>
+      <tr>
+        <th rowspan="2">Horse</th>
+        <td>Mare</td>
+      </tr>
+      <tr>
+        <td>Stallion</td>
+      </tr>
+      <tr>
+        <th colspan="2">Crocodile</th>
+      </tr>
+      <tr>
+        <th rowspan="2">Chicken</th>
+        <td>Hen</td>
+      </tr>
+      <tr>
+        <td>Rooster</td>
+      </tr>
+    </table> -->
+
+    <!-- <table>
+      <colgroup>
+        <col />
+        <col style="background-color: yellow" />
+      </colgroup>
+
+      <tr>
+        <th>Data 1</th>
+        <th>Data 2</th>
+      </tr>
+      <tr>
+        <td>Calcutta</td>
+        <td>Orange</td>
+      </tr>
+      <tr>
+        <td>Robots</td>
+        <td>Jazz</td>
+      </tr>
+    </table> -->
+
+    <table>
+      <!-- note, colgroup may not work in most browsers. just use classes and such to style them
+        fixed, CSS styles on certain elements were overriding these styles, that's why they weren't showing up (still probably better to just style in CSS)
+         -->
+      <colgroup>
+        <col span="2" />
+        <col style="background-color: #97db9a" />
+        <col style="width: 42px" />
+        <col style="background-color: #97db9a" />
+        <col style="background-color: #dcc48e; border: 4px solid #c1437a" />
+        <col span="2" style="width: 42px" />
+      </colgroup>
+
+      <tr>
+        <td>&nbsp;</td>
+        <th>Mon</th>
+        <th>Tues</th>
+        <th>Wed</th>
+        <th>Thurs</th>
+        <th>Fri</th>
+        <th>Sat</th>
+        <th>Sun</th>
+      </tr>
+      <tr>
+        <th>1st period</th>
+        <td>English</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>2nd period</th>
+        <td>English</td>
+        <td>English</td>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>3rd period</th>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>&nbsp;</td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th>4th period</th>
+        <td>&nbsp;</td>
+        <td>English</td>
+        <td>&nbsp;</td>
+        <td>English</td>
+        <td>Dutch</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+<!-- EMMET NOTES
+Grouping ()
+Whatever is inside the parenthesis will be grouped together in a block
+It was noted that this, along with the multiplication emmet, you could create an entire markup page with an abbreviation, but that's not good practice
+div>(header>ul>li*2>a)+footer>p
+
+Output:
+<div>
+    <header>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </header>
+    <footer>
+        <p></p>
+    </footer>
+</div>
+
+ID's and Classes
+div#header+div.page+div#footer.class1.class2.class3
+
+Output: 
+<div id="header"></div>
+<div class="page"></div>
+<div id="footer" class="class1 class2 class3"></div>
+
+Custom Attributes
+Reminder, elements can have custom attributes that we create
+td[title="Hello world!" colspan=3]
+
+Output: 
+<td title="Hello world!" colspan="3"></td>
+
+Item Numbering
+ul>li.item$*5
+
+Output:
+<ul>
+    <li class="item1"></li>
+    <li class="item2"></li>
+    <li class="item3"></li>
+    <li class="item4"></li>
+    <li class="item5"></li>
+</ul>
+
+ul>li.item$$$*5
+You can use more than one $ symbol to pad 0's to the number
+
+Output:
+<ul>
+    <li class="item001"></li>
+    <li class="item002"></li>
+    <li class="item003"></li>
+    <li class="item004"></li>
+    <li class="item005"></li>
+</ul>
+
+ul>li.item$@-*5
+ul>li.item$@3*5
+ul>li.item$@-3*5
+Change number direction and base (number after @ is what base number will be)
+
+<ul>
+    <li class="item5"></li>
+    <li class="item4"></li>
+    <li class="item3"></li>
+    <li class="item2"></li>
+    <li class="item1"></li>
+</ul>
+
+<ul>
+    <li class="item3"></li>
+    <li class="item4"></li>
+    <li class="item5"></li>
+    <li class="item6"></li>
+    <li class="item7"></li>
+</ul>
+
+<ul>
+    <li class="item7"></li>
+    <li class="item6"></li>
+    <li class="item5"></li>
+    <li class="item4"></li>
+    <li class="item3"></li>
+</ul>
+
+Text
+Add text to something with space for text
+
+Output:
+<a href="">Click me</a>
+
+CTRL + ALT + K -> Removes current tag that cursor is on
+
+-->
